@@ -49,7 +49,7 @@ async def send_doc(client,message):
        _used_date = find_one(user_id)
        used_date = _used_date["date"]      
        c_time = time.time()
-       LIMIT = 0
+       LIMIT = 60
        then = used_date+ LIMIT
        left = round(then - c_time)
        conversion = datetime.timedelta(seconds=left)
